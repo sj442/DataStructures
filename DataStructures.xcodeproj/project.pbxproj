@@ -18,6 +18,8 @@
 		3F06AFF21D47053B0050D021 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F06AFEF1D47053B0050D021 /* LinkedList.swift */; };
 		3F06AFF31D47053B0050D021 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F06AFF01D47053B0050D021 /* Node.swift */; };
 		3F06AFF51D47067F0050D021 /* Iterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F06AFF41D47067F0050D021 /* Iterable.swift */; };
+		3F06AFF71D4706CD0050D021 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F06AFF61D4706CD0050D021 /* Stack.swift */; };
+		3F06AFF91D4708CD0050D021 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F06AFF81D4708CD0050D021 /* Queue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		3F06AFEF1D47053B0050D021 /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		3F06AFF01D47053B0050D021 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		3F06AFF41D47067F0050D021 /* Iterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Iterable.swift; sourceTree = "<group>"; };
+		3F06AFF61D4706CD0050D021 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		3F06AFF81D4708CD0050D021 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 				3F06AFEE1D47053B0050D021 /* Bag.swift */,
 				3F06AFEF1D47053B0050D021 /* LinkedList.swift */,
 				3F06AFF01D47053B0050D021 /* Node.swift */,
+				3F06AFF61D4706CD0050D021 /* Stack.swift */,
+				3F06AFF81D4708CD0050D021 /* Queue.swift */,
 			);
 			path = "Basic Data Structures";
 			sourceTree = "<group>";
@@ -286,6 +292,8 @@
 			files = (
 				3F06ADE21D453B6E0050D021 /* ViewController.swift in Sources */,
 				3F06AFF51D47067F0050D021 /* Iterable.swift in Sources */,
+				3F06AFF71D4706CD0050D021 /* Stack.swift in Sources */,
+				3F06AFF91D4708CD0050D021 /* Queue.swift in Sources */,
 				3F06ADE01D453B6E0050D021 /* AppDelegate.swift in Sources */,
 				3F06AFF21D47053B0050D021 /* LinkedList.swift in Sources */,
 				3F06AFF31D47053B0050D021 /* Node.swift in Sources */,
