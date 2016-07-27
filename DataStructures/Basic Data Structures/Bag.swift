@@ -24,7 +24,7 @@ struct Bag<T: Equatable> {
     return numberOfObjects
   }
   
-  mutating func add(item: T) {
+  mutating func addItem(item: T) {
     let oldHead = head
     let newNode = Node(withValue: item)
     head = newNode

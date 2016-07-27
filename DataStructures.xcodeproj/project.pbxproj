@@ -20,6 +20,10 @@
 		3F06AFF51D47067F0050D021 /* Iterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F06AFF41D47067F0050D021 /* Iterable.swift */; };
 		3F06AFF71D4706CD0050D021 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F06AFF61D4706CD0050D021 /* Stack.swift */; };
 		3F06AFF91D4708CD0050D021 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F06AFF81D4708CD0050D021 /* Queue.swift */; };
+		3FE28E441D48629900E1225F /* ConnectedComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE28E431D48629900E1225F /* ConnectedComponents.swift */; };
+		3FE28E481D4868C600E1225F /* BFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE28E451D4868C600E1225F /* BFS.swift */; };
+		3FE28E491D4868C600E1225F /* DFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE28E461D4868C600E1225F /* DFS.swift */; };
+		3FE28E4A1D4868C600E1225F /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE28E471D4868C600E1225F /* Graph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		3F06AFF41D47067F0050D021 /* Iterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Iterable.swift; sourceTree = "<group>"; };
 		3F06AFF61D4706CD0050D021 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		3F06AFF81D4708CD0050D021 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		3FE28E431D48629900E1225F /* ConnectedComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectedComponents.swift; sourceTree = "<group>"; };
+		3FE28E451D4868C600E1225F /* BFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFS.swift; sourceTree = "<group>"; };
+		3FE28E461D4868C600E1225F /* DFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFS.swift; sourceTree = "<group>"; };
+		3FE28E471D4868C600E1225F /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,7 @@
 		3F06ADDE1D453B6E0050D021 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
+				3FE28E421D48627400E1225F /* Graph */,
 				3F06AFED1D4705220050D021 /* Basic Data Structures */,
 				3F06AE111D45576E0050D021 /* Protocols */,
 				3F06ADDF1D453B6E0050D021 /* AppDelegate.swift */,
@@ -157,6 +166,17 @@
 				3F06AFF81D4708CD0050D021 /* Queue.swift */,
 			);
 			path = "Basic Data Structures";
+			sourceTree = "<group>";
+		};
+		3FE28E421D48627400E1225F /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				3FE28E451D4868C600E1225F /* BFS.swift */,
+				3FE28E461D4868C600E1225F /* DFS.swift */,
+				3FE28E471D4868C600E1225F /* Graph.swift */,
+				3FE28E431D48629900E1225F /* ConnectedComponents.swift */,
+			);
+			path = Graph;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,14 +310,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE28E4A1D4868C600E1225F /* Graph.swift in Sources */,
 				3F06ADE21D453B6E0050D021 /* ViewController.swift in Sources */,
+				3FE28E481D4868C600E1225F /* BFS.swift in Sources */,
 				3F06AFF51D47067F0050D021 /* Iterable.swift in Sources */,
 				3F06AFF71D4706CD0050D021 /* Stack.swift in Sources */,
+				3FE28E491D4868C600E1225F /* DFS.swift in Sources */,
 				3F06AFF91D4708CD0050D021 /* Queue.swift in Sources */,
 				3F06ADE01D453B6E0050D021 /* AppDelegate.swift in Sources */,
 				3F06AFF21D47053B0050D021 /* LinkedList.swift in Sources */,
 				3F06AFF31D47053B0050D021 /* Node.swift in Sources */,
 				3F06AFF11D47053B0050D021 /* Bag.swift in Sources */,
+				3FE28E441D48629900E1225F /* ConnectedComponents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
