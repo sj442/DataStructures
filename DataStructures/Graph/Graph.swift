@@ -16,7 +16,7 @@
 
 import UIKit
 
-struct Graph {
+class Graph: NSObject {
   
   let V: Int
   var adj: [Bag<Int>]
@@ -63,7 +63,7 @@ struct Graph {
     }
   }
   
-  mutating func addEdge(v: Int, w: Int) {
+  func addEdge(v: Int, w: Int) {
     adj[v].addItem(w)
     adj[w].addItem(v)
   }
@@ -73,15 +73,15 @@ struct Graph {
   }
   
   func vertices() -> Int {
-    return 0
+    return V
   }
   
   func edges() -> Int {
-    return 0
-  }
-  
-  func toString() -> String {
-    return ""
+    var count = 0
+    for v in 0..<V {
+      count += adj[v].size()
+    }
+    return count
   }
 
   func iterate() {
