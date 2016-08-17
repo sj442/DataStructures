@@ -12,21 +12,21 @@ class Edge<T: Comparable>: NSObject {
 
   let weight: Double
   
-  let v: Int
-  let w: Int
+  let v: T
+  let w: T
   
   
-  init(v: Int, w: Int, weight: Double) {
+  init(v: T, w: T, weight: Double) {
     self.v = v
     self.w = w
     self.weight = weight
   }
   
-  func either() -> Int {
+  func either() -> T {
     return v
   }
   
-  func other(x: Int) -> Int {
+  func other(x: T) -> T {
     if x == v {
       return w
     }

@@ -9,5 +9,21 @@
 import UIKit
 
 class MST: NSObject {
+  
+  let graph: EdgeWeightedGraph
 
+  init(withGraph G: EdgeWeightedGraph) {
+    self.graph = G
+    super.init()
+    self.computeMST()
+  }
+  
+  private func computeMST() {
+    
+  }
+  
+  func edges() -> [Edge<Int>] {
+    return []
+  }
+  
 }

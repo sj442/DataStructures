@@ -59,9 +59,44 @@ struct BagGenerator<T: Equatable>: GeneratorType {
 
 extension Bag: SequenceType {
   
-  
   func generate() -> BagGenerator<T> {
     return BagGenerator(withHead: head)
+  }
+  
+}
+
+
+extension Bag: Iterable {
+  
+  func iterate() -> [T] {
+    guard let head = head else {
+      return []
+    }
+    var array = [T]()
+    var x = head
+    while x.next != nil {
+      array.append(x.value)
+      x = x.next!
+    }
+    array.append(x.value)
+    return array
+    
+  }
+  
+  subscript(index: Int) -> T? {
+    var counter = 0
+    guard let head = head else {
+      return nil
+    }
+    var x = head
+    while x.next != nil && counter < size() {
+      if counter == index {
+        return x.value
+      }
+      x = x.next!
+      counter += 1
+    }
+    return nil
   }
   
 }
