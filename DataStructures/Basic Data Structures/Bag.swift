@@ -29,6 +29,7 @@ struct Bag<T: Equatable> {
     let newNode = Node(withValue: item)
     head = newNode
     newNode.next = oldHead
+    numberOfObjects += 1
   }
   
 }
@@ -48,11 +49,11 @@ struct BagGenerator<T: Equatable>: GeneratorType {
     }
     let item = current
     current = item?.next
-    return item?.value
+    return current?.value
   }
   
   func hasNext() -> Bool {
-    return current != nil
+    return current?.next !=  nil
   }
 }
 
