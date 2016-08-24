@@ -193,9 +193,9 @@
 		3FE28E421D48627400E1225F /* Graph */ = {
 			isa = PBXGroup;
 			children = (
+				3FE28E471D4868C600E1225F /* Graph.swift */,
 				3FE28E451D4868C600E1225F /* BFS.swift */,
 				3FE28E461D4868C600E1225F /* DFS.swift */,
-				3FE28E471D4868C600E1225F /* Graph.swift */,
 				3FC3B5B81D4AF60A008EFBCB /* Digraph.swift */,
 				3F18D4FF1D4E56CD006F6B74 /* Edge.swift */,
 				3FF718131D64046800A98A65 /* DirectedEdge.swift */,

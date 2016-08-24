@@ -18,7 +18,7 @@ struct Queue<T: Equatable> {
   var numberOfObjects = 0
   
   func isEmpty() -> Bool {
-    return first == nil
+    return numberOfObjects == 0
   }
   
   func size() -> Int {
@@ -34,6 +34,7 @@ struct Queue<T: Equatable> {
     if isEmpty() {
       first = Node(withValue: item)
       last = first
+      numberOfObjects += 1
       return
     }
     

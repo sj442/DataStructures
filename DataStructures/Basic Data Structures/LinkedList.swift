@@ -34,9 +34,10 @@ struct LinkedList<T: Equatable> {
     guard let head = head else {
       return nil
     }
+    let value = head.value
     let second = head.next
     self.head = second
-    return head.value
+    return value
   }
   
   // Adds an item to the end of the list
@@ -69,16 +70,22 @@ struct LinkedList<T: Equatable> {
     head = nil
   }
   
-  // Removes and return the last element from the list
-  func removeLast() -> T? {
+  // Removes and returns the last element from the list
+  mutating func removeLast() -> T? {
     guard let head = head else {
       return nil
     }
+    if head.next == nil {
+      let value = head.value
+      self.head = nil
+      return value
+    }
     var x = head
-    while x.next?.next != nil {
+    var temp = head
+    while x.next != nil {
+      temp = x
       x = x.next!
     }
-    let temp = x
     let last = temp.next
     temp.next = nil
     return last?.value
@@ -131,10 +138,14 @@ struct LinkedList<T: Equatable> {
   
   // Inserts element before given element
   mutating func insertBefore(key: T, toInsert: T) {
-    if isEmpty() {
+    var x: Node<T>?
+
+    guard let head = head else {
+      self.head = Node(withValue: toInsert)
       return
     }
-    if head?.value == key {
+    
+    if head.value == key {
       let newHead = Node(withValue: toInsert)
       let temp = head
       self.head = newHead
@@ -142,8 +153,8 @@ struct LinkedList<T: Equatable> {
       return
     }
     
-    var x = head
-    var y = head?.next
+    x = head
+    var y = head.next
     
     while y != nil && y?.value != key {
       x = x?.next
@@ -158,17 +169,18 @@ struct LinkedList<T: Equatable> {
   
   // Returns the first occurence of the spcified element in the list
   mutating func remove(item: T) {
-    if isEmpty() {
+    var x: Node<T>?
+    guard let head = head else {
       return
     }
     
-    if head?.value == item {
-      head = nil
+    if head.value == item {
+      self.head = nil
       return
     }
     
-    var x = head
-    var y = head?.next
+    x = head
+    var y = head.next
     while y != nil && y?.value != item {
       x = x?.next
       y = y?.next

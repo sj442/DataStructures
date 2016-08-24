@@ -16,7 +16,7 @@ struct Stack<T: Equatable> {
   var numberOfObjects = 0
   
   func isEmpty() -> Bool {
-    return first == nil
+    return numberOfObjects == 0
   }
   
   // Returns the most recently added item to the list
@@ -32,6 +32,7 @@ struct Stack<T: Equatable> {
     let oldFirst = first
     first = Node(withValue: item)
     first?.next = oldFirst
+    numberOfObjects += 1
     }
     
   

@@ -21,12 +21,16 @@ class Graph: NSObject {
   let V: Int
   var adj: [Bag<Int>]
   
-  static func degree(graph g: Graph, vertex v: Int) -> Int {
-    var degree = 0
-    for _ in g.adjacent(vertex: v) {
-      degree += 1
+  init(withVertices V: Int) {
+    self.V = V
+    self.adj = [Bag<Int>]()
+    for v in 0..<V {
+      adj[v] = Bag<Int>()
     }
-    return degree
+  }
+  
+  static func degree(graph g: Graph, vertex v: Int) -> Int {
+    return g.adjacent(vertex: v).size()
   }
   
   static func maxDegree(graph g: Graph) -> Int {
@@ -55,14 +59,6 @@ class Graph: NSObject {
     return count/2
   }
   
-  init(withVertices V: Int) {
-    self.V = V
-    self.adj = [Bag<Int>]()
-    for v in 0..<V {
-      adj[v] = Bag<Int>()
-    }
-  }
-  
   func addEdge(v: Int, w: Int) {
     adj[v].addItem(w)
     adj[w].addItem(v)
@@ -81,7 +77,7 @@ class Graph: NSObject {
     for v in 0..<V {
       count += adj[v].size()
     }
-    return count
+    return count/2
   }
 
   func iterate() {

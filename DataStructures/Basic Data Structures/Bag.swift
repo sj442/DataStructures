@@ -53,7 +53,10 @@ struct BagGenerator<T: Equatable>: GeneratorType {
   }
   
   func hasNext() -> Bool {
-    return current?.next !=  nil
+    guard let _ = current?.next else {
+      return false
+    }
+    return true
   }
 }
 
@@ -81,7 +84,6 @@ extension Bag: Iterable {
     }
     array.append(x.value)
     return array
-    
   }
   
   subscript(index: Int) -> T? {
