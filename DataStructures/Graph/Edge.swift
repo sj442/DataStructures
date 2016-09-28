@@ -26,14 +26,14 @@ class Edge<T: Comparable>: NSObject {
     return v
   }
   
-  func other(x: T) -> T {
+  func other(_ x: T) -> T {
     if x == v {
       return w
     }
     return v
   }
   
-  func compareTo(edge: Edge) -> Int {
+  func compareTo(_ edge: Edge) -> Int {
     if weight < edge.weight {
       return -1
     } else if weight > edge.weight {

@@ -18,7 +18,7 @@ class MST: NSObject {
     self.computeMST()
   }
   
-  private func computeMST() {
+  fileprivate func computeMST() {
     
   }
   

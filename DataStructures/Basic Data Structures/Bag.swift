@@ -24,7 +24,7 @@ struct Bag<T: Equatable> {
     return numberOfObjects
   }
   
-  mutating func addItem(item: T) {
+  mutating func addItem(_ item: T) {
     let oldHead = head
     let newNode = Node(withValue: item)
     head = newNode
@@ -35,7 +35,7 @@ struct Bag<T: Equatable> {
 }
 
 
-struct BagGenerator<T: Equatable>: GeneratorType {
+struct BagGenerator<T: Equatable>: IteratorProtocol {
   
   var current: Node<T>?
   
@@ -61,9 +61,9 @@ struct BagGenerator<T: Equatable>: GeneratorType {
 }
 
 
-extension Bag: SequenceType {
+extension Bag: Sequence {
   
-  func generate() -> BagGenerator<T> {
+  func makeIterator() -> BagGenerator<T> {
     return BagGenerator(withHead: head)
   }
   

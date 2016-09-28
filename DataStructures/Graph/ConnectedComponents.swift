@@ -37,12 +37,12 @@ struct ConnectedComponents {
   }
   
   // Return true if v and w are in the same connected component
-  func connected(v: Int, w: Int) -> Bool {
+  func connected(_ v: Int, w: Int) -> Bool {
     return id[v] == id[w]
   }
   
   // Returns the connected graph the vertex belongs to. Connected vertices will belong to the same graph, and return the same id. Connected query can be done in constant time
-  func id(v: Int) -> Int {
+  func id(_ v: Int) -> Int {
     return 0
   }
 

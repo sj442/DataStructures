@@ -14,7 +14,7 @@ import UIKit
 class Digraph: Graph {
   
   // Adds edge from v to w
-  override func addEdge(v: Int, w: Int) {
+  override func addEdge(_ v: Int, w: Int) {
     adj[v].addItem(w)
   }
   

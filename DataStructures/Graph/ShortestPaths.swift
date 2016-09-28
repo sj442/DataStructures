@@ -19,11 +19,11 @@ class ShortestPaths: NSObject {
     self.s = s
   }
   
-  func distanceTo(v: Int) -> Double {
+  func distanceTo(_ v: Int) -> Double {
     return 0
   }
   
-  func pathTo(v: Int) -> [DirectedEdge<Int>] {
+  func pathTo(_ v: Int) -> [DirectedEdge<Int>] {
     return []
   }
 

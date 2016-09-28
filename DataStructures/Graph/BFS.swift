@@ -10,11 +10,11 @@ import UIKit
 
 struct BFS {
   
-  private var marked = [Bool]()
+  fileprivate var marked = [Bool]()
   
-  private var edgeTo = [Int]()
+  fileprivate var edgeTo = [Int]()
   
-  private let source: Int
+  fileprivate let source: Int
   
   init(withGraph graph: Graph, Source s: Int) {
     self.source = s
@@ -25,7 +25,6 @@ struct BFS {
   
   mutating func hasPathTo(graph G: Graph, v: Int) -> Bool {
     breadthFirstSearch(graph: G, v: v)
-    
     return marked[v]
   }
   
@@ -45,6 +44,5 @@ struct BFS {
       }
     }
   }
-  
   
 }

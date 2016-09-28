@@ -22,7 +22,7 @@ class EdgeWeightedGraph: NSObject {
     }
   }
   
-  func addEdge(e: Edge<Int>) {
+  func addEdge(_ e: Edge<Int>) {
     let v = e.either()
     let w = e.other(v)
     adj[v].addItem(e)

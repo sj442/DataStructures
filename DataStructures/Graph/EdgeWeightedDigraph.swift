@@ -27,9 +27,10 @@ class EdgeWeightedDigraph: NSObject {
     return adj[v]
   }
   
-  func addEdge(edge: DirectedEdge<Int>) {
+  func addEdge(_ edge: DirectedEdge<Int>) {
     let v = edge.from()
     adj[v].addItem(edge)
   }
+
   
 }

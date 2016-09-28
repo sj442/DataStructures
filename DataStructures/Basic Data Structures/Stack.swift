@@ -28,7 +28,7 @@ struct Stack<T: Equatable> {
     return numberOfObjects
   }
   
-  mutating func push(item: T) {
+  mutating func push(_ item: T) {
     let oldFirst = first
     first = Node(withValue: item)
     first?.next = oldFirst

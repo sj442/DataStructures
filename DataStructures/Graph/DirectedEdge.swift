@@ -11,7 +11,6 @@ import UIKit
 class DirectedEdge<T: Comparable>: NSObject {
   
   let v: T
-  
   let w: T
   
   let weight: Double

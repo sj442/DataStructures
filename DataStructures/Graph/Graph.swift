@@ -59,7 +59,7 @@ class Graph: NSObject {
     return count/2
   }
   
-  func addEdge(v: Int, w: Int) {
+  func addEdge(_ v: Int, w: Int) {
     adj[v].addItem(w)
     adj[w].addItem(v)
   }

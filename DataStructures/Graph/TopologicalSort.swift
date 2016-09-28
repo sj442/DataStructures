@@ -8,6 +8,7 @@
 
 import UIKit
 
+//Topological sort in a directed acyclic graph
 struct TogologicalSort<T: Equatable> {
   
   var stack: Stack<Int>
@@ -22,7 +23,7 @@ struct TogologicalSort<T: Equatable> {
     sort(G)
   }
   
-  mutating func sort(G: Digraph) {
+  mutating func sort(_ G: Digraph) {
     for v in 0..<G.V {
       if !marked[v] {
         var dfs = DFS(withGraph: G, Source: v)

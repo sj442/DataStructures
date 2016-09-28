@@ -18,7 +18,7 @@ struct LinkedList<T: Equatable> {
   }
   
   // Adds an element at the beginning of the list. Sets it as the head of the list
-  mutating func addFirst(item: T) {
+  mutating func addFirst(_ item: T) {
     let newNode = Node(withValue: item)
     newNode.next = head
     head = newNode
@@ -41,7 +41,7 @@ struct LinkedList<T: Equatable> {
   }
   
   // Adds an item to the end of the list
-  mutating func addLast(item: T) {
+  mutating func addLast(_ item: T) {
     guard let head = head else {
       self.head = Node(withValue: item)
       return
@@ -92,7 +92,7 @@ struct LinkedList<T: Equatable> {
   }
   
   // Checks if an item is present in the list
-  func contains(item: T) -> Bool {
+  func contains(_ item: T) -> Bool {
     var x = head
     while x != nil {
       if x!.value == item {
@@ -104,7 +104,7 @@ struct LinkedList<T: Equatable> {
   }
   
   // Returns the ite at a given index from the head in the list
-  func get(index: Int) -> T? {
+  func get(_ index: Int) -> T? {
     var counter = 0
     var x = head
     
@@ -116,7 +116,7 @@ struct LinkedList<T: Equatable> {
   }
   
   // Inserts element after given element
-  mutating func insertAfter(key: T, toInsert: T) {
+  mutating func insertAfter(_ key: T, toInsert: T) {
     var x: Node<T>?
     
     if let head = head {
@@ -137,7 +137,7 @@ struct LinkedList<T: Equatable> {
   }
   
   // Inserts element before given element
-  mutating func insertBefore(key: T, toInsert: T) {
+  mutating func insertBefore(_ key: T, toInsert: T) {
     var x: Node<T>?
 
     guard let head = head else {
@@ -168,7 +168,7 @@ struct LinkedList<T: Equatable> {
   
   
   // Returns the first occurence of the spcified element in the list
-  mutating func remove(item: T) {
+  mutating func remove(_ item: T) {
     var x: Node<T>?
     guard let head = head else {
       return

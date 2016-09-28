@@ -10,11 +10,11 @@ import UIKit
 
 struct DFS {
   
-  private var marked = [Bool]()
+  fileprivate var marked = [Bool]()
   
-  private var edgeTo = [Int]()
+  fileprivate var edgeTo = [Int]()
   
-  private let source: Int
+  fileprivate let source: Int
   
   init(withGraph graph: Graph, Source s: Int) {
     self.source = s
@@ -25,7 +25,6 @@ struct DFS {
   
   mutating func hasPathTo(graph G: Graph, v: Int) -> Bool {
     depthFirstSearch(graph: G, v: source)
-    
     return marked[v]
   }
   
@@ -59,5 +58,5 @@ struct DFS {
     }
     return array
   }
-
+  
 }

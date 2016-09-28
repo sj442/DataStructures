@@ -30,7 +30,7 @@ struct Queue<T: Equatable> {
    return first?.value
   }
   
-  mutating func enqueue(item: T) {
+  mutating func enqueue(_ item: T) {
     if isEmpty() {
       first = Node(withValue: item)
       last = first
